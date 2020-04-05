@@ -1,20 +1,23 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React from "react";
+// import { Link } from "gatsby";
+import { FaGithub } from "react-icons/fa";
 
-import Container from 'components/Container';
+import Container from "components/Container";
 
 const Header = () => {
   return (
     <header>
       <Container type="content">
-        <p>My Gatsby Site</p>
+        <p>COVID-19 Mapplication</p>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <a href="https://github.com/iainr3">
+              <FaGithub /> GitHub
+            </a>
           </li>
-          <li>
+          {/* <li>
             <Link to="/page-2/">Page 2</Link>
-          </li>
+          </li> */}
         </ul>
       </Container>
     </header>
