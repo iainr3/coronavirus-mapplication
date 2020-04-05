@@ -15,9 +15,9 @@ const CENTER = [LOCATION.lat, LOCATION.lng];
 const DEFAULT_ZOOM = 2;
 const max_Zoom = 5;
 const min_Zoom = 2;
-const northEast = L.latLng(-89.981557, -180);
-const southWest = L.latLng(89.981557, 180);
-const bounds = L.latLngBounds(southWest, northEast);
+// const northEast = L.LatLng(-89.981557, -180);
+// const southWest = L.LatLng(89.981557, 180);
+// const bounds = L.LatLngBounds(southWest, northEast);
 
 const IndexPage = () => {
   /**
@@ -115,6 +115,19 @@ const IndexPage = () => {
 
     geoJsonLayers.addTo(map);
   }
+
+  // const northEast = L.LatLng(-89.981557, -180);
+  // const southWest = L.LatLng(89.981557, 180);
+  // const bounds = L.LatLngBounds(southWest, northEast);
+  // map.panTo([50, 30]);
+  // map.panTo({lon: 30, lat: 50});
+  // map.panTo({lat: 50, lng: 30});
+  // map.panTo(L.latLng(50, 30));
+
+  const bounds = [
+    [89.98, 180],
+    [-89.98, -180],
+  ];
 
   const mapSettings = {
     center: CENTER,
