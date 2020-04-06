@@ -41,42 +41,16 @@
   height: 3.6em;
   font-size: 0.7em;
   font-weight: bold;
-  background-color: $cyan-800;
+  background-color: mix($grey-900, $blue-900, 30);
   border-radius: 100%;
-  box-shadow: 0 2px 5px rgba($color: #000000, $alpha: 0.9);
-
-  &:hover {
-    .icon-marker-tooltip {
-      display: block;
-    }
-  }
+  box-shadow: 0 2px 5px rgba($color: #000000, $alpha: 0.8);
+}
+.leaflet-popup-content-wrapper {
+  background-color: mix($grey-900, $blue-900, 80) !important;
+  color: $grey-50 !important;
 }
 
-.icon-marker-tooltip {
-  display: none;
-  position: absolute;
-  bottom: 100%;
-  width: 16em;
-  font-size: 1.4em;
-  padding: 1em;
-  background-color: mix($grey-800, $green-900, 50);
-  border-radius: 0.4em;
-  margin-bottom: 1em;
-  box-shadow: 0 3px 5px rgba($color: #000000, $alpha: 0.9);
-
-  &:before {
-    display: block;
-    position: absolute;
-    bottom: -0.6em;
-    left: 50%;
-    content: "";
-    width: 1.4em;
-    height: 1.4em;
-    background-color: mix($grey-800, $green-900, 50);
-    transform: rotate(45deg);
-    margin-left: -0.7em;
-  }
-
+.leaflet-popup-content-wrapper .leaflet-popup-content {
   h2 {
     font-size: 1.5em;
     line-height: 1.2;
@@ -99,4 +73,8 @@
     padding: 0;
     margin: 0.6em 0 0;
   }
+}
+
+.leaflet-popup-tip {
+  background-color: mix($grey-900, $blue-900, 80) !important;
 }

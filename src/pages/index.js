@@ -89,16 +89,6 @@ const IndexPage = () => {
 
         const html = `
       <span class="icon-marker">
-        <span class="icon-marker-tooltip">
-            <h2>${country}</h2>
-            <ul>
-                <li><strong>Confirmed:</strong> ${cases}</li>
-                <li><strong>Deaths:</strong> ${deaths}</li>
-                <li><strong>Recovered:</strong> ${recovered}</li>
-                <li><strong>Active Cases:</strong> ${active}</li>
-                <li><strong>Last Update:</strong>${updatedFormatted}</li>
-            </ul>
-        </span>
         ${casesString}
       </span>
       `;
@@ -109,9 +99,33 @@ const IndexPage = () => {
             html,
           }),
           riseOnHover: true,
-        });
+        })
+          .bindPopup({ className: "info-popup" })
+          .setPopupContent(
+            `<h2>${country}</h2> <ul>
+          <li><strong>Confirmed:</strong> ${cases}</li>
+          <li><strong>Deaths:</strong> ${deaths}</li>
+          <li><strong>Recovered:</strong> ${recovered}</li>
+          <li><strong>Active Cases:</strong> ${active}</li>
+          <li><strong>Last Update:</strong> ${updatedFormatted}</li>
+      </ul>`
+          )
+          .openPopup();
       },
     });
+
+    {
+      /* <span class="icon-marker-tooltip">
+              <h2>${country}</h2>
+              <ul>
+                  <li><strong>Confirmed:</strong> ${cases}</li>
+                  <li><strong>Deaths:</strong> ${deaths}</li>
+                  <li><strong>Recovered:</strong> ${recovered}</li>
+                  <li><strong>Active Cases:</strong> ${active}</li>
+                  <li><strong>Last Update:</strong>${updatedFormatted}</li>
+              </ul>
+          </span> */
+    }
 
     geoJsonLayers.addTo(map);
   }

@@ -1,7 +1,7 @@
 header {
   width: 100%;
-  color: $white;
-  background-color: $green-900;
+  color: $grey-100;
+  background-color: $blue-grey-900;
 
   .container {
     display: flex;
@@ -22,7 +22,7 @@ header {
 
   a {
     display: block;
-    color: lighten($green-900, 60);
+    color: lighten($blue-grey-900, 60);
     text-decoration: none;
     padding: 0 0.5em;
   }
