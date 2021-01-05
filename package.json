@@ -4,7 +4,7 @@
   "version": "0.2.2",
   "author": "Iain",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "gatsby": "^2.19.43",
     "gatsby-plugin-manifest": "2.2.16",
     "gatsby-plugin-offline": "3.0.14",
